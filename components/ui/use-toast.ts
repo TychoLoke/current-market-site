@@ -1,13 +1,13 @@
 "use client";
 
 import * as React from "react";
-import { ToastActionElement, type ToastProps } from "@radix-ui/react-toast";
+import type { ToastProps } from "@radix-ui/react-toast";
 
 export type Toast = ToastProps & {
   id: string;
   title?: React.ReactNode;
   description?: React.ReactNode;
-  action?: ToastActionElement;
+  action?: React.ReactNode;
 };
 
 type ToastState = {
