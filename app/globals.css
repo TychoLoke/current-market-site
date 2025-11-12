@@ -9,16 +9,32 @@
 body {
   @apply bg-background text-ink font-sans antialiased;
   background-image: radial-gradient(circle at 20% 20%, rgba(123, 74, 226, 0.08), transparent 45%),
-    radial-gradient(circle at 80% 10%, rgba(239, 77, 91, 0.06), transparent 50%);
+    radial-gradient(circle at 80% 10%, rgba(239, 77, 91, 0.06), transparent 50%),
+    linear-gradient(180deg, rgba(11, 10, 18, 0.9) 0%, rgba(11, 10, 18, 0.98) 100%);
   min-height: 100vh;
 }
 
 a {
+  position: relative;
   @apply text-ink transition-colors duration-200 ease-out;
 }
 
-a:hover {
-  @apply text-white;
+a::after {
+  content: "";
+  position: absolute;
+  inset-x: 0;
+  bottom: -0.15em;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms ease;
+  background: linear-gradient(90deg, rgba(123, 74, 226, 0.7), rgba(239, 77, 91, 0.7));
+  opacity: 0.7;
+}
+
+a:hover::after,
+a:focus-visible::after {
+  transform: scaleX(1);
 }
 
 main {
@@ -31,6 +47,22 @@ main {
 
 section {
   @apply py-16 md:py-24;
+}
+
+.hero-gradient {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 20% 20%, rgba(123, 74, 226, 0.3), transparent 50%),
+    radial-gradient(circle at 80% 30%, rgba(239, 77, 91, 0.28), transparent 60%),
+    radial-gradient(circle at 50% 80%, rgba(123, 74, 226, 0.2), transparent 60%);
+  animation: gradientPulse 12s ease-in-out infinite alternate;
+  filter: blur(120px);
+}
+
+.hero-gradient-secondary {
+  animation-delay: -6s;
+  opacity: 0.8;
 }
 
 .card {
@@ -80,4 +112,184 @@ textarea {
 
 header {
   @apply backdrop-blur-lg;
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.noise-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes gradientPulse {
+  0% {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(1.15) translate3d(-2%, -3%, 0);
+  }
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+  to {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+.animate-accordion-down {
+  animation: accordion-down 240ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-accordion-up {
+  animation: accordion-up 200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes dialog-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes dialog-out {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+}
+
+.animate-dialog-in {
+  animation: dialog-in 260ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-dialog-out {
+  animation: dialog-out 200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes overlay-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes overlay-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.animate-overlay-in {
+  animation: overlay-fade-in 220ms ease;
+}
+
+.animate-overlay-out {
+  animation: overlay-fade-out 200ms ease;
+}
+
+@keyframes sheet-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes sheet-out {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.animate-sheet-in {
+  animation: sheet-in 260ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-sheet-out {
+  animation: sheet-out 220ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes toast-out {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+}
+
+.animate-toast-in {
+  animation: toast-in 220ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-toast-out {
+  animation: toast-out 240ms cubic-bezier(0.16, 1, 0.3, 1);
 }
