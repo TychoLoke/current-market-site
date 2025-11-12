@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Toaster } from "@/components/ui/toaster";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
@@ -15,7 +17,7 @@ export const metadata: Metadata = {
     template: "%s · Current Market"
   },
   description:
-    "Current Market is a research-driven creative lab helping technology brands align strategy, narrative, and design.",
+    "Current Market is a research-driven creative lab helping technology brands align strategy, narrative, and design from Deurne, NL.",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -26,7 +28,7 @@ export const metadata: Metadata = {
     siteName: "Current Market",
     images: [
       {
-        url: "/og-image.svg",
+        url: `${siteUrl}/og?title=Current%20Market`,
         width: 1200,
         height: 630,
         alt: "Current Market — The Brand Intelligence Lab"
@@ -38,17 +40,23 @@ export const metadata: Metadata = {
     title: "Current Market — The Brand Intelligence Lab",
     description:
       "Where creativity meets intelligence. Strategy, narrative, and design for technology leaders.",
-    images: ["/og-image.svg"]
+    images: [`${siteUrl}/og?title=Current%20Market`]
+  },
+  alternates: {
+    canonical: siteUrl
   }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+      <body className={`${inter.className} relative flex min-h-screen flex-col bg-background`}>
+        <TooltipProvider delayDuration={200}>
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </TooltipProvider>
+        <Toaster />
       </body>
     </html>
   );

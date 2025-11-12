@@ -5,6 +5,8 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
+import { Button } from "@/components/ui/button";
+
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
@@ -51,6 +53,11 @@ export function Header() {
             </Link>
           ))}
         </nav>
+        <div className="hidden md:block">
+          <Button asChild size="sm" variant="secondary">
+            <Link href="/contact">Start a brief</Link>
+          </Button>
+        </div>
         <button
           type="button"
           className="md:hidden inline-flex h-11 w-11 items-center justify-center rounded-full border border-card-border"
@@ -90,6 +97,11 @@ export function Header() {
               </Link>
             ))}
           </nav>
+          <div className="container pb-4">
+            <Button asChild className="w-full" onClick={() => setOpen(false)}>
+              <Link href="/contact">Start a brief</Link>
+            </Button>
+          </div>
         </div>
       )}
     </header>
