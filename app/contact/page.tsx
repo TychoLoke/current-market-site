@@ -142,7 +142,7 @@ export default function ContactPage() {
             </p>
           </div>
 
-          <div className="space-y-6 rounded-2xl border border-card-border bg-card-bg/70 p-8 shadow-soft">
+          <div className="surface space-y-6 p-8">
             <Tabs value={type} onValueChange={(value) => setType(value as ProjectType)}>
               <TabsList className="flex-wrap">
                 {projectTypes.map((item) => (
@@ -204,7 +204,7 @@ export default function ContactPage() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
-            <div className="rounded-2xl border border-card-border bg-card-bg/70 p-6">
+            <div className="surface p-6">
               <h2 className="text-sm font-semibold uppercase tracking-[0.3em] text-ink-muted">
                 Prefer email?
               </h2>
@@ -216,7 +216,7 @@ export default function ContactPage() {
                 hello@currentmarketlab.com
               </Link>
             </div>
-            <div className="rounded-2xl border border-card-border bg-card-bg/70 p-6">
+            <div className="surface p-6">
               <h2 className="text-sm font-semibold uppercase tracking-[0.3em] text-ink-muted">Connect</h2>
               <p className="mt-3 text-sm text-ink-muted">Join our network and follow along with lab experiments.</p>
               <TooltipProvider>

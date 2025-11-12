@@ -13,8 +13,8 @@ const config: Config = {
         "ink-muted": "rgba(246,246,249,0.7)",
         "accent-violet": "#7B4AE2",
         "accent-red": "#EF4D5B",
-        "card-bg": "rgba(255,255,255,0.04)",
-        "card-border": "rgba(255,255,255,0.12)"
+        "card-bg": "rgba(29,18,52,0.8)",
+        "card-border": "rgba(123,74,226,0.32)"
       },
       borderRadius: {
         "2xl": "1.25rem"

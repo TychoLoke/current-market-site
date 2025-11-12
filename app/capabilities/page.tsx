@@ -236,7 +236,7 @@ export default function CapabilitiesPage() {
             </TabsList>
             {tabs.map((tab) => (
               <TabsContent key={tab.value} value={tab.value}>
-                <div className="space-y-8 rounded-2xl border border-card-border bg-card-bg/70 p-8 backdrop-blur">
+                <div className="surface space-y-8 p-8">
                   <p className="text-base leading-relaxed text-ink-muted">{tab.intro}</p>
                   <div>
                     <h3 className="text-lg font-semibold text-ink">What you get</h3>
@@ -315,7 +315,7 @@ export default function CapabilitiesPage() {
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             {engagementModels.map((model) => (
-              <div key={model.title} className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-card-border bg-card-bg/70 p-6 shadow-soft">
+              <div key={model.title} className="surface relative flex h-full flex-col overflow-hidden p-6">
                 <div className="noise-overlay" />
                 <div className="relative flex-1 space-y-4">
                   <div className="space-y-1">

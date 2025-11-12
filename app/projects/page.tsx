@@ -121,7 +121,7 @@ export default function ProjectsPage() {
                 }}
                 whileHover={{ rotateX: 3, rotateY: -3, translateY: -8 }}
                 transition={{ type: "spring", stiffness: 180, damping: 18 }}
-                className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-card-border bg-card-bg/70 p-6 text-left shadow-soft"
+                className="group surface relative flex h-full flex-col overflow-hidden p-6 text-left"
               >
                 <div className="absolute inset-0 opacity-0 transition group-hover:opacity-100" aria-hidden>
                   <div className="h-full w-full bg-gradient-to-br from-accent-violet/40 via-transparent to-accent-red/30" />

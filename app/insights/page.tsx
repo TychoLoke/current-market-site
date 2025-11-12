@@ -128,7 +128,7 @@ export default function InsightsPage() {
               return (
                 <div
                   key={post.title}
-                  className="rounded-2xl border border-card-border bg-card-bg/70 p-6 shadow-soft backdrop-blur"
+                  className="surface p-6"
                 >
                   <button
                     type="button"

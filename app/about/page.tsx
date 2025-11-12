@@ -164,7 +164,7 @@ export default function AboutPage() {
                 <AccordionItem
                   key={step.value}
                   value={step.value}
-                  className="overflow-hidden rounded-2xl border border-card-border bg-card-bg/70"
+                  className="surface overflow-hidden"
                 >
                   <AccordionTrigger className="px-6 text-lg font-semibold text-ink">
                     {step.title}
@@ -189,7 +189,7 @@ export default function AboutPage() {
             {principles.map(({ title, copy, icon: Icon }) => (
               <div
                 key={title}
-                className="relative overflow-hidden rounded-2xl border border-card-border bg-card-bg/70 p-8 shadow-soft backdrop-blur"
+                className="surface relative p-8"
               >
                 <div className="absolute inset-0 opacity-[0.05]">
                   <div className="hero-gradient" />
@@ -216,7 +216,7 @@ export default function AboutPage() {
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             {metrics.map((metric) => (
-              <div key={metric.label} className="rounded-2xl border border-card-border bg-card-bg/60 p-6 text-center">
+              <div key={metric.label} className="surface p-6 text-center">
                 <div className="text-4xl font-semibold text-ink">
                   <AnimatedNumber value={metric.value} />
                   <span className="ml-1 text-2xl text-ink-muted">{metric.unit}</span>
@@ -229,7 +229,7 @@ export default function AboutPage() {
       </section>
 
       <section>
-        <div className="container space-y-4 rounded-2xl border border-card-border bg-card-bg/70 p-8 md:flex md:items-center md:justify-between">
+        <div className="container space-y-4 surface p-8 md:flex md:items-center md:justify-between">
           <div className="space-y-2">
             <span className="kicker">Press & Speaking</span>
             <p className="text-sm text-ink-muted">

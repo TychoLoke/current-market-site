@@ -261,7 +261,7 @@ function TestimonialsCarousel() {
   }, []);
 
   return (
-    <div className="relative overflow-hidden rounded-2xl border border-card-border bg-card-bg/70 p-8 md:p-12">
+    <div className="surface p-8 md:p-12">
       <div className="noise-overlay" />
       <motion.div
         key={index}
@@ -390,7 +390,7 @@ export default function HomePage() {
                 key={title}
                 whileHover={{ translateY: -6 }}
                 transition={{ type: "spring", stiffness: 120, damping: 14 }}
-                className="relative overflow-hidden rounded-2xl border border-card-border bg-card-bg/70 p-8 backdrop-blur"
+                className="surface p-8"
               >
                 <div className="absolute inset-0 opacity-[0.06]">
                   <div className="hero-gradient" />
@@ -427,7 +427,7 @@ export default function HomePage() {
             </TabsList>
             {pillarTabs.map((tab) => (
               <TabsContent key={tab.value} value={tab.value}>
-                <div className="grid gap-8 rounded-2xl border border-card-border bg-card-bg/70 p-8 backdrop-blur">
+                <div className="surface grid gap-8 p-8">
                   <div className="space-y-4">
                     <h3 className="text-2xl font-semibold text-ink">{tab.headline}</h3>
                     <ul className="grid gap-3 text-sm text-ink-muted md:grid-cols-3">
@@ -459,11 +459,17 @@ export default function HomePage() {
 
       <section className="relative overflow-hidden">
         <div className="container space-y-6">
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-3">
             <span className="kicker">Clients & Ecosystem</span>
-            <h2 className="text-3xl font-semibold md:text-4xl">Trusted across product, platform, and community brands</h2>
+            <h2 className="text-3xl font-semibold md:text-4xl">
+              Trusted across product, platform, and community brands I help shape
+            </h2>
+            <p className="max-w-2xl text-sm text-ink-muted">
+              The companies below represent founders, product teams, and community networks I actively collaborate with to
+              translate intelligence into adoption and momentum.
+            </p>
           </div>
-          <div className="relative overflow-hidden rounded-2xl border border-card-border bg-card-bg/70 p-6">
+          <div className="surface p-6">
             <div className="marquee-track">
               {[...clients, ...clients].map((client, index) => (
                 <div key={`${client}-${index}`} className="text-lg font-semibold tracking-widest text-ink/80">
