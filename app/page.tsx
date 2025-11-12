@@ -152,26 +152,35 @@ const pillarTabs = [
   }
 ];
 
-const clients = ["Intercom", "Notion", "MessageBird", "Miro", "GitLab", "Fathom", "Arc", "Linear"];
+const clients = [
+  "Current Market Lab partners",
+  "Founder-led SaaS circles",
+  "Platform teams I embed with",
+  "Community ventures I co-create",
+  "Research guild collaborators",
+  "Advisory sprints (NL/EU)",
+  "Narrative system pilots",
+  "Fractional brand leadership"
+];
 
 const testimonials = [
   {
     quote:
-      "Current Market unlocked a strategy narrative our entire leadership team can sell. Every roadmap decision now ladders into that story.",
-    name: "Elena Vos",
-    title: "Chief Strategy Officer, HelioStack"
+      "I only take on programs where I can be embedded with the product or community team. Being on the inside is how I keep the strategy grounded in truth.",
+    name: "Tycho Loke",
+    title: "Founder, Current Market Lab"
   },
   {
     quote:
-      "They transformed our founder vision into a message platform that performs in enterprise rooms without losing soul.",
-    name: "Marcus Reid",
-    title: "Co-founder, Northwind Cloud"
+      "Every narrative system I ship comes with the enablement to run it: message architectures, decision frameworks, and tooling tailored to the team.",
+    name: "Tycho Loke",
+    title: "Principal Strategist"
   },
   {
     quote:
-      "Design reviews with the lab feel like working with an in-house motion team—sharp instincts, fast iteration, measurable impact.",
-    name: "Priya Chand",
-    title: "Head of Brand, LumenOps"
+      "The lab is my way of giving founders and operators a thinking partner who can shift between research, story, design, and activation without losing momentum.",
+    name: "Tycho Loke",
+    title: "Brand Intelligence Partner"
   }
 ];
 
@@ -462,11 +471,11 @@ export default function HomePage() {
           <div className="flex flex-col gap-3">
             <span className="kicker">Clients & Ecosystem</span>
             <h2 className="text-3xl font-semibold md:text-4xl">
-              Trusted across product, platform, and community brands I help shape
+              Circles where I’m hands-on every week
             </h2>
             <p className="max-w-2xl text-sm text-ink-muted">
-              The companies below represent founders, product teams, and community networks I actively collaborate with to
-              translate intelligence into adoption and momentum.
+              I only reference communities and teams where I’m actively contributing—advisory seats, embedded product collabs,
+              and founder circles shaping new platforms together.
             </p>
           </div>
           <div className="surface p-6">
@@ -502,10 +511,10 @@ export default function HomePage() {
       <section>
         <div className="container space-y-10">
           <div className="max-w-2xl space-y-4">
-            <span className="kicker">Signals from partners</span>
-            <h2 className="text-3xl font-semibold md:text-4xl">Stories from the Current Market network</h2>
+            <span className="kicker">How I show up</span>
+            <h2 className="text-3xl font-semibold md:text-4xl">What working with me feels like</h2>
             <p className="text-base text-ink-muted">
-              Feedback loops keep our lab honest. We gather qualitative and quantitative signals after every sprint and long-term program.
+              These principles come straight from engagement retrospectives and weekly check-ins with the founders and operators I support.
             </p>
           </div>
           <TestimonialsCarousel />

@@ -25,43 +25,43 @@ type FilterValue = (typeof filters)[number];
 
 const projects = [
   {
-    title: "Above The Stack",
+    title: "MSP Research Collective (confidential)",
     category: "community" as FilterValue,
     summary:
-      "We built a modular research brand for MSP leaders, blending editorial strategy with interactive data tools to grow community velocity.",
+      "Composite of the ongoing research and editorial platform I co-steward with MSP founders—turning interviews and telemetry into a living intelligence hub.",
     problem:
-      "The client needed to move beyond webinars and become the neutral authority MSPs trusted for market intelligence.",
+      "Our circle needed to move beyond ad-hoc webinars and offer members a dependable source of narrative and market proof.",
     approach:
-      "We ran founder and partner interviews, codified a research-backed narrative, and designed a modular publishing system with motion-rich data storytelling.",
+      "I facilitated founder dialogues, synthesized qualitative insights, and prototyped a modular publishing system that made data stories easy to ship.",
     outcome:
-      "Subscriptions doubled in one quarter, community session attendance grew 32%, and sponsors cited the new story as the reason they signed on.",
-    kpis: ["+32% event attendance", "+2x subscriber growth", "18 enterprise sponsors"]
+      "The community now anchors monthly sessions on the shared narrative library, with sponsors referencing the insights as their reason to stay involved.",
+    kpis: ["Living research library", "Modular publishing stack", "Sponsor retention trending up"]
   },
   {
-    title: "ChannelOS",
+    title: "Channel Platform Advisory (ongoing)",
     category: "platform" as FilterValue,
     summary:
-      "Narrative + product design partnership translating a complex channel operations product into a simple platform story.",
+      "Embedded advisory partnership translating a complex channel operations product into a clear platform promise for sales and product teams alike.",
     problem:
-      "Sales teams struggled to articulate how workflows connected, leading to long deal cycles and inconsistent demos.",
+      "The teams needed a cohesive story connecting workflows so operators and buyers could see the complete value arc.",
     approach:
-      "We mapped user journeys, rebuilt the value narrative, and designed interactive demo flows plus a component-based marketing site in Next.js.",
+      "I mapped user journeys, rebuilt the value narrative, and designed interactive demo flows alongside a component-based marketing system.",
     outcome:
-      "Demo-to-close time decreased by 27% while average contract value grew 18% thanks to clearer bundle positioning.",
-    kpis: ["-27% sales cycle", "+18% ACV", "95% demo clarity score"]
+      "With the shared story in place, enablement sessions run faster and the team tracks shorter decision cycles from demo to commit.",
+    kpis: ["Unified platform narrative", "Interactive demo system", "Faster deal decisions"]
   },
   {
-    title: "AvePoint Story Lab",
+    title: "Enterprise Story Lab (retainer)",
     category: "enterprise" as FilterValue,
     summary:
-      "Executive communications program helping the leadership team translate product innovation into high-stakes narratives.",
+      "Executive communications lab where I translate product innovation into narrative assets, keynotes, and enablement kits for global teams.",
     problem:
-      "Complex product updates were overwhelming internal comms teams and creating misalignment across global markets.",
+      "Rapid product changes were overwhelming internal comms, creating misalignment between regions and leadership.",
     approach:
-      "We instituted a recurring story lab with research synthesis, message blueprints, and keynote design support paired with enablement workshops.",
+      "I instituted a recurring story lab with research synthesis, message blueprints, and keynote design support paired with enablement workshops.",
     outcome:
-      "Global field teams reported 40% faster access to aligned messaging while analyst briefings highlighted the clarity of the new narrative.",
-    kpis: ["+40% messaging adoption", "4 global launch kits", "Analyst rating: standout clarity"]
+      "Field teams report faster access to aligned messaging and analyst briefings cite the clarity of the new narrative structure.",
+    kpis: ["Recurring executive labs", "Message blueprint library", "Analyst feedback: clarity"]
   }
 ];
 
@@ -96,7 +96,7 @@ export default function ProjectsPage() {
               Case studies from the lab
             </motion.h1>
             <motion.p variants={fadeInUp} className="max-w-3xl text-lg text-ink-muted">
-              Every engagement is designed as an experiment with measurable outcomes. Explore a sample of recent strategy, narrative, and design programs.
+              Every engagement is designed as an experiment with measurable outcomes. The cases below are anonymized composites of programs I personally lead across community, platform, and enterprise environments.
             </motion.p>
           </motion.div>
 
